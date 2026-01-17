@@ -50,8 +50,8 @@ Create a PostgreSQL database named `db` and update the connection details in `sr
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/db
-spring.datasource.username=postgres
-spring.datasource.password=Shubham@123
+spring.datasource.username=username
+spring.datasource.password=password
 ```
 
 The application will automatically create the required tables using the schema defined in `src/main/resources/schema.sql`.
@@ -156,13 +156,7 @@ payments/
 └── README.md                        # This file
 ```
 
-## Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
