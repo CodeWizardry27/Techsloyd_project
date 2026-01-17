@@ -79,24 +79,32 @@ The application will start on `http://localhost:8080`.
 - `POST /api/payments/refund` - Refund a payment
 - `GET /api/payments/{id}/status` - Get payment status
 - `GET /api/payments/fee` - Calculate processing fee
+- `POST /api/payments/verify` - Verify payment
 
 ### Transaction Controller (`/api/transactions`)
 
-- `POST /api/transactions` - Create a new transaction
-- `GET /api/transactions/{id}` - Get transaction details
-- `PUT /api/transactions/{id}/void` - Void a transaction
+- `GET /api/transactions` - Get all transactions
+- `GET /api/transactions/:id` - Get transaction by ID
+- `POST /api/transactions` - Create transaction
+- `POST /api/transactions/:id/void` - Void transaction
 - `GET /api/transactions/search` - Search transactions
+- `GET /api/transactions/summary` - Get summary stats
+- `GET /api/transactions/closeout` - Daily closeout report
 
 ### Receipt Controller (`/api/receipts`)
 
-- `POST /api/receipts/generate` - Generate a receipt
-- `POST /api/receipts/email` - Send receipt via email
-- `POST /api/receipts/sms` - Send receipt via SMS
+- `POST /api/receipts/generate` - Generate receipt
+- `GET /api/receipts/:transactionId` - Get receipt data
+- `POST /api/receipts/email` - Email receipt
+- `POST /api/receipts/sms` - SMS receipt link
 - `POST /api/receipts/print` - Print receipt
+- `GET /api/receipts/:transactionId/pdf` - Get PDF receipt
+- `GET /api/receipts/:transactionId/html` - Get HTML receipt
 
 ### Discount Controller (`/api/discounts`)
 
 - `POST /api/discounts` - Create a discount
+- `POST /api/discounts` - Get discount
 - `POST /api/discounts/apply` - Apply discount to transaction
 - `POST /api/discounts/validate` - Validate discount code
 
